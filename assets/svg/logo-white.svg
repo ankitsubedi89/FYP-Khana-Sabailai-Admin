@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65.518" height="106.783" viewBox="0 0 65.518 106.783">
+  <g id="Group_1" data-name="Group 1" transform="translate(-605.482 -448.217)">
+    <g id="Layer_2" data-name="Layer 2" transform="translate(708.479 452)">
+      <g id="Q3_icons" data-name="Q3 icons" transform="translate(-105 -12)">
+        <path id="Path_3" data-name="Path 3" d="M45.7,36.9c-4.6-7.7-16-15.4-22.2-16.2a1.968,1.968,0,1,0-.5,3.9c2.8.5,7.6,3,11.9,6.4-3.6,3.4-9,4.9-13.4,3.6C13.8,32.4,9.9,22.5,7.1,14.3l7.6-1.1C21.3,12,27,11,30.8,13.6s4,5,4.6,8.3L38,23.7a1,1,0,0,0,1.6-.9c-.6-4.7-2.1-9.4-6.5-12.4S21.2,8,14,9.2a80.6,80.6,0,0,1-9.7,1.3H3a.9.9,0,0,0-.9,1.3L2.5,13c3.1,9.4,7.4,22.3,17.8,25.4a17.4,17.4,0,0,0,4.5.6A19.5,19.5,0,0,0,38,33.7,29.4,29.4,0,0,1,42.3,39,1.9,1.9,0,0,0,44,40a2.2,2.2,0,0,0,1.3-.4A2.1,2.1,0,0,0,45.7,36.9Z" fill="#fff"/>
+      </g>
+    </g>
+    <text id="K" transform="translate(615 509)" fill="#fff" font-size="39" font-family="Laila-Medium, Laila" font-weight="500"><tspan x="0" y="0">K</tspan></text>
+    <text id="S" transform="translate(631 527)" fill="#fff" font-size="63" font-family="Laila-Light, Laila" font-weight="300"><tspan x="0" y="0">S</tspan></text>
+  </g>
+</svg>
