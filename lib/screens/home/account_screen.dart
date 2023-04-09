@@ -175,6 +175,27 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(GetRoutes.locScreen);
+                },
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  decoration: boxDecoration(),
+                  child: const Text(
+                    'Leftover Companies',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
                 height: 20,
               ),
               GetBuilder<LoginController>(builder: (controller) {

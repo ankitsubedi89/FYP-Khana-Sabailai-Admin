@@ -4,6 +4,7 @@ import 'package:khana_sabailai_admin/screens/food/category_screen.dart';
 import 'package:khana_sabailai_admin/screens/food/single_food_screen.dart';
 import 'package:khana_sabailai_admin/screens/home/bottom_tab.dart';
 import 'package:khana_sabailai_admin/screens/home/report_screen.dart';
+import 'package:khana_sabailai_admin/screens/loc/loc_screen.dart';
 import 'package:khana_sabailai_admin/screens/restaurant/single_restaurant.dart';
 import 'package:khana_sabailai_admin/splash.dart';
 
@@ -15,6 +16,7 @@ class GetRoutes {
   static const String singleFood = '/singleFood';
   static const String reportScreen = '/report-screen';
   static const String singleRestaurant = '/single-restaurant';
+  static const String locScreen =  '/loc-screen';
 
   static List<GetPage> routes = [
     GetPage(
@@ -41,9 +43,13 @@ class GetRoutes {
       name: GetRoutes.singleFood,
       page: () => SingleFoodScreen(),
     ),
-    // GetPage(
-    //   name: GetRoutes.reportScreen,
-    //   page: () => const ReportScreen(),
-    // ),
+    GetPage(
+      name: GetRoutes.reportScreen,
+      page: () => const ReportScreen(),
+    ),
+    GetPage(
+      name: GetRoutes.locScreen,
+      page: () => const LocScreen(),
+    ),
   ];
 }

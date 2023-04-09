@@ -1,3 +1,3 @@
-const ipaddress = '172.16.16.130';
+const ipaddress = '192.168.1.90';
 
 const baseurl = "http://$ipaddress/FYP-Khana-Sabailai-backend/";
