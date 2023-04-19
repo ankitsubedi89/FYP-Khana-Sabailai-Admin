@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:khana_sabailai_admin/controllers/menu_controller.dart';
+import 'package:khana_sabailai_admin/controllers/menu_controller.dart' as mcontroller;
 import 'package:khana_sabailai_admin/models/category.dart';
 import 'package:khana_sabailai_admin/models/restaurant.dart';
 import 'package:khana_sabailai_admin/widgets/add_edit_food.dart';
@@ -18,7 +18,7 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MenuController>(builder: (controller) {
+    return GetBuilder<mcontroller.MenuController>(builder: (controller) {
       return Scaffold(
         appBar: AppBar(
           title: Text(category.name!),
@@ -70,7 +70,7 @@ class CategoryScreen extends StatelessWidget {
                                 Positioned(
                                   left: 5,
                                   top: 5,
-                                  child: GetBuilder<MenuController>(
+                                  child: GetBuilder<mcontroller.MenuController>(
                                     builder: (controller) {
                                       return Row(
                                         children: [

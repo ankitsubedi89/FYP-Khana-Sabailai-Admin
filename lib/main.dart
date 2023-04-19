@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:khana_sabailai_admin/controllers/login_controller.dart';
+import 'package:khana_sabailai_admin/controllers/restaurant_controller.dart';
 import 'package:khana_sabailai_admin/routes.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(LoginController());
+ Get.put(RestaurantController());
     WidgetsFlutterBinding.ensureInitialized();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitDown,

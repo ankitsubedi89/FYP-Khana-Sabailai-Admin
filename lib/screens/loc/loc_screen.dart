@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'package:khana_sabailai_admin/controllers/loc_controller.dart';
@@ -54,7 +52,7 @@ class LocScreen extends StatelessWidget {
                               context: (context),
                               builder: (context) => AlertDialog(
                                     title: Text('Delete ${e.name}'),
-                                    content: Text(
+                                    content: const Text(
                                       'Are you sure you want to delete this company?',
                                     ),
                                     actions: [

@@ -54,11 +54,13 @@ class LoginScreen extends StatelessWidget {
                       controller: controller.passwordController,
                     ),
                     const SizedBox(height: 15),
-                    CustomButton(
-                        label: 'Login',
-                        onPressed: () {
-                          controller.checkLogin();
-                        })
+                    Center(
+                      child: CustomButton(
+                          label: 'Login',
+                          onPressed: () {
+                            controller.checkLogin();
+                          }),
+                    )
                   ],
                 ),
                 const SizedBox(height: 40),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:khana_sabailai_admin/controllers/restaurant_controller.dart';
 import 'package:khana_sabailai_admin/controllers/splash_controller.dart';
 
 class SplashScreen extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:khana_sabailai_admin/baseurl.dart';
-import 'package:khana_sabailai_admin/controllers/menu_controller.dart';
+import 'package:khana_sabailai_admin/controllers/menu_controller.dart' as mcontroller;
 import 'package:khana_sabailai_admin/models/category.dart';
 import 'package:khana_sabailai_admin/models/restaurant.dart';
 import 'package:khana_sabailai_admin/routes.dart';
@@ -80,7 +80,7 @@ class SingleRestaurant extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        GetBuilder<MenuController>(builder: (controller) {
+                        GetBuilder<mcontroller.MenuController>(builder: (controller) {
                           return CircularBtn(
                               color: Colors.black,
                               onTap: () {
@@ -126,7 +126,7 @@ class SingleRestaurant extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    GetBuilder<MenuController>(builder: (controller) {
+                    GetBuilder<mcontroller.MenuController>(builder: (controller) {
                       return Wrap(
                         children: controller.categories
                             .map((e) => InkWell(
@@ -142,7 +142,7 @@ class SingleRestaurant extends StatelessWidget {
                                       Positioned(
                                         left: 5,
                                         top: 5,
-                                        child: GetBuilder<MenuController>(
+                                        child: GetBuilder<mcontroller.MenuController>(
                                           builder: (controller) {
                                             return Row(
                                               children: [

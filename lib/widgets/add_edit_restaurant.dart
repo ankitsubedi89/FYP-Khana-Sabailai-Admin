@@ -3,24 +3,24 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:khana_sabailai_admin/controllers/menu_controller.dart' as mcontroller;
+import 'package:khana_sabailai_admin/controllers/restaurant_controller.dart';
 import 'package:khana_sabailai_admin/widgets/custom_text_field.dart';
 
-class AddFoodDialog extends StatelessWidget {
-  const AddFoodDialog(
+class AddEditRestaurant extends StatelessWidget {
+  const AddEditRestaurant(
       {Key? key,
-      required this.pickBtn,
+       this.pickBtn,
       required this.button,
       this.type = 'Add'})
       : super(key: key);
 
-  final Widget pickBtn;
+  final Widget? pickBtn;
   final Widget button;
   final String type;
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<mcontroller.MenuController>(builder: (controller) {
+    return GetBuilder<RestaurantController>(builder: (controller) {
       return Dialog(
         child: Container(
           padding: const EdgeInsets.all(20),
@@ -31,7 +31,7 @@ class AddFoodDialog extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '$type Dish',
+                      '$type Restaurant',
                       style: const TextStyle(
                           fontSize: 18, fontWeight: FontWeight.w600),
                     ),
@@ -53,33 +53,58 @@ class AddFoodDialog extends StatelessWidget {
                         ? Image.network(controller.imageFile?.path ?? '')
                         : Image.file(File(controller.imageFile?.path ?? '')),
                   ),
-                pickBtn,
+                pickBtn ?? const SizedBox.shrink(),
                 const SizedBox(height: 20),
                 CustomFormField(
-                  label: 'Food Name',
-                  controller: controller.foodNameController,
+                  label: 'Restaurant Name',
+                  controller: controller.nameController,
                   prefixIcon: const Icon(Icons.dining_sharp),
                 ),
-                const SizedBox(height: 20),
+                if(type == 'Add')
+                Column(
+                  children: [
+                    const SizedBox(height: 20),
+                  
                 CustomFormField(
-                  label: 'Food Price',
-                  controller: controller.foodPriceController,
-                  prefixIcon: const Icon(Icons.money),
-                  keyboardType: TextInputType.number,
+                  label: 'Email',
+                  controller: controller.emailController,
+                  prefixIcon: const Icon(Icons.email),
+                  keyboardType: TextInputType.emailAddress,
                 ),
                 const SizedBox(height: 20),
                 CustomFormField(
-                  label: 'Food Quantity',
-                  controller: controller.foodQuantityController,
+                  label: 'Password',
+                  controller: controller.passwordController,
+                  prefixIcon: const Icon(Icons.password),
+                  isObscure: true,
+                ),],
+                ),
+                const SizedBox(height: 20),
+                CustomFormField(
+                  label: 'Contact',
+                  controller: controller.contactController,
                   prefixIcon: const Icon(Icons.numbers),
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(height: 20),
                 CustomFormField(
-                  label: 'Food Description',
-                  controller: controller.foodDescriptionController,
+                  label: 'Address',
+                  controller: controller.addressController,
                   prefixIcon: const Icon(Icons.description),
-                  lines: 5,
+                ),
+                const SizedBox(height: 20),
+                CustomFormField(
+                  label: 'Latitude',
+                  controller: controller.latController,
+                  prefixIcon: const Icon(Icons.numbers),
+                  keyboardType: TextInputType.number,
+                ),
+                const SizedBox(height: 20),
+                CustomFormField(
+                  label: 'Longitude',
+                  controller: controller.lonController,
+                  prefixIcon: const Icon(Icons.numbers),
+                  keyboardType: TextInputType.number,
                 ),
                 const SizedBox(height: 20),
                 button

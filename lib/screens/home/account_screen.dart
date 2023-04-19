@@ -142,7 +142,7 @@ class AccountScreen extends StatelessWidget {
                         horizontal: 20, vertical: 10),
                     decoration: boxDecoration(),
                     child: const Text(
-                      'Orders Stats',
+                      'Orders Report',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,

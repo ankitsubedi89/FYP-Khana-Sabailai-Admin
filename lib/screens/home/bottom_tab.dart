@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:khana_sabailai_admin/controllers/bottomtab_controller.dart';
 import 'package:khana_sabailai_admin/controllers/loc_controller.dart';
 import 'package:khana_sabailai_admin/controllers/main_controller.dart';
-import 'package:khana_sabailai_admin/controllers/menu_controller.dart';
+import 'package:khana_sabailai_admin/controllers/menu_controller.dart' as mcontroller;
 import 'package:khana_sabailai_admin/controllers/order_controller.dart';
 import 'package:khana_sabailai_admin/controllers/user_controller.dart';
 import 'package:khana_sabailai_admin/widgets/icon_with_badge.dart';
@@ -13,7 +13,7 @@ class BottomTab extends StatelessWidget {
   BottomTab({Key? key}) : super(key: key);
 
   final bottomTabController = Get.put(BottomTabController());
-  final menuController = Get.put(MenuController());
+  final menuController = Get.put(mcontroller.MenuController());
   final orderController = Get.put(OrderController());
   final userController = Get.put(UserController());
   final mainController = Get.put(MainController());
